@@ -1,0 +1,127 @@
+@import '../../base/colors';
+@import '../../base/typography';
+@import '../../base/variables';
+
+.nav--inactive {
+    display: none;
+}
+
+.nav {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: transparentize($very-dark-blue, 0.04);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    color: white;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.nav__head {
+    width: $mobileWidth;
+    margin: auto;
+    padding-top: 2rem;
+    line-height: 100%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.nav__head::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav__close {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+}
+
+.nav__logo {
+    display: inline-block;
+    filter: brightness(10);
+    float: left;
+}
+
+.nav__brand {
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.nav__links {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.nav__linkItem {
+    position: relative;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 4rem;
+}
+
+.nav__linkItem::before  {
+    content: '';
+    background-color: transparentize(white, 0.9);
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $mobileWidth;
+    height: 1px;
+}
+
+.nav__linkItem::after  {
+    content: '';
+    background-color: transparentize(white, 0.9);
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $mobileWidth;
+    height: 1px;
+}
+
+.nav__socialLinks {
+    display: inline-block;
+    position: absolute;
+    bottom: 2.5rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 17rem;
+}
+
+
+.nav__socialLink {
+    color: white;
+}
+
+.nav__socialItem {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav__button {
+    background-color: transparentize($very-dark-blue, 1);
+    border:2px solid white;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    width: 17rem;
+}

@@ -1,0 +1,33 @@
+.header {
+    //position: relative;
+}
+
+.header--invisible {
+    visibility: hidden;
+}
+
+.header__open {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+}
+
+.header__items {
+    width: $mobileWidth;
+    margin: auto;
+    padding-top: 2rem;
+    line-height: 100%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.header__items::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.header__logo {
+    display: inline-block;
+    float: left;
+}

@@ -1,0 +1,39 @@
+@import '../../base/variables';
+@import '../../base/colors';
+
+
+.hero {
+
+}
+
+.hero__image {
+    max-width: $mobileWidth;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.hero__headline {
+    line-height: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero__claim {
+    max-width: $mobileWidth;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+}
+
+.hero__button--secondary {
+    background-color: $light-gray !important;
+    color: $very-dark-blue !important;
+}
+
+.hero__buttons {
+    max-width: $mobileWidth;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
