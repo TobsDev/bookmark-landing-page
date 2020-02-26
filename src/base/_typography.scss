@@ -2,7 +2,8 @@
 @import './colors';
 @import './variables';
 
-$rubik: 'Rubik', sans-serif;
+$rubik: 'Rubik',
+sans-serif;
 $light: 300;
 $regular: 400;
 $bold: 500;
@@ -53,4 +54,3 @@ span {
 button {
     font-size: 0.8rem;
 }
-

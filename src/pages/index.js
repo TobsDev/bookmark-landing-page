@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Header from '../layout/header/header'
-import Nav from '../components/nav/nav'
 import Hero from '../components/hero/hero'
 import Features from '../components/features/features'
 import Downloads from '../components/downloads/download'
@@ -13,22 +12,22 @@ import Footer from '../layout/footer/footer'
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    
+
   }
-  
-  render () {
-    return (
-      <div className="indexPage">
+
+  render() {
+    return ( 
+      <div className = "indexPage">
         <Header />
         <Hero />
-        <Features />
+        {/* <Features />
         <Downloads />
         <FAQS />
         <Newsletter />
-        <Footer />
+        <Footer /> */}
       </div>
     );
   }
-};
+}
 
 export default IndexPage
