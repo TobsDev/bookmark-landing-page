@@ -5,4 +5,4 @@
 
 This project is developed using the Gatsbyjs static site generator and SASS in combination with the BEM framework and will be hosted on Zeit.co leveraging continuous deployment.
 
-Project management is done through JIRA which in turn is connected to Github. Let's test this.
+Project management is done through JIRA which in turn is connected to Github. Let's test this again
