@@ -1,0 +1,87 @@
+@import '../../base/variables';
+
+.features__copy {
+    max-width: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+}
+
+.features__item {
+    line-height: 3.5rem;
+    position: relative;
+}
+
+.features__list {
+    position: relative;
+}
+
+.features__list::before {
+    content: '';
+    background-color: transparentize(black, 0.8);
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $mobileWidth;
+    height: 1px;
+}
+
+.features__list::after {
+    content: '';
+    background-color: transparentize(black, 0.8);
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $mobileWidth;
+    height: 1px;
+}
+
+.features__item::before {
+    content: '';
+    background-color: transparentize(black, 0.8);
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $mobileWidth;
+    height: 1px;
+}
+
+.features__item::after {
+    content: '';
+    background-color: transparentize(black, 0.8);
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $mobileWidth;
+    height: 1px;
+}
+
+.features__item--active::after {
+    content: '';
+    background-color: transparentize(red, 0.2);
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 8rem;
+    height: 4px;
+}

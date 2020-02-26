@@ -1,10 +1,21 @@
 import React from 'react';
 import Feature from '../feature/feature';
+import features from '../../content/features.json'
 
 class Features extends React.Component {
     constructor(props) {
         super(props);
-        
+        this.state = {
+            activeFeature: 1
+        }
+        this.toggleFeature = this.toggleFeature.bind(this)
+    }
+
+    toggleFeature(e) {
+        let id = e.target.id
+        this.setState({
+            activeFeature: id
+        })
     }
 
     render() {
@@ -13,11 +24,26 @@ class Features extends React.Component {
             <h2 className="features__headline">Features</h2>
             <p className="features__copy">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access thern on the go.</p>
             <ul className="features__list">
-                <li className="features__item">Simple Bookmarking</li>
-                <li className="features__item">Speedy Searching</li>
-                <li className="features__item">Easy Sharing</li>
+                {features.map(feature => {
+                    return(
+                        <li className={`features__item ${this.state.activeFeature == feature.id ? 'features__item--active' : ''}`} id={feature.id} onClick={this.toggleFeature}>
+                            {feature.title}
+                        </li>
+                    );
+                })}
             </ul>
-            <Feature />
+            {features.map(feature => {
+                return(
+                    <Feature 
+                        imgUrl={feature.imgUrl}    
+                        headline={feature.headline}
+                        copy={feature.copy}
+                        activeFeature={this.state.activeFeature}
+                        id={feature.id}
+                    />
+                );
+            })}
+            
         </div>
         )
     }

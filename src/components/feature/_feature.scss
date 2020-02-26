@@ -1,0 +1,16 @@
+.feature__description {
+    max-width: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+}
+
+.feature__image {
+    max-width: $mobileWidth;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.feature--inactive {
+    display: none;
+}

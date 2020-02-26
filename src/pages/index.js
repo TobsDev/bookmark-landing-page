@@ -20,8 +20,8 @@ class IndexPage extends React.Component {
       <div className = "indexPage">
         <Header />
         <Hero />
-        {/* <Features />
-        <Downloads />
+        <Features />
+        {/* <Downloads />
         <FAQS />
         <Newsletter />
         <Footer /> */}

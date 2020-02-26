@@ -1,4 +1,7 @@
 import React from 'react';
+import feature1 from '../../images/illustration-features-tab-1.svg'
+import feature2 from '../../images/illustration-features-tab-2.svg'
+import feature3 from '../../images/illustration-features-tab-3.svg'
 
 class Feature extends React.Component {
     constructor(props) {
@@ -7,13 +10,23 @@ class Feature extends React.Component {
     }
 
     render() {
+
+        let images = [feature1, feature2, feature3]
+        let image = images[this.props.id - 1]
+
         return (
-            <div className="feature feature--active">
-                <img src="" alt="" className="feature__image"/>
-                <h3 className="feature__headline">Bookmark in one click</h3>
-                <p className="feature__description">Organize your bookmark however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+            <div className={`feature ${this.props.id != this.props.activeFeature ? 'feature--inactive' : ''}`} id={this.props.id} >
+                <img 
+                    src={image}
+                    alt={`feature ${this.props.id}`} 
+                    className="feature__image"
+                />
+                <h3 className="feature__headline">{this.props.headline}</h3>
+                <p className="feature__description">{this.props.copy}</p>
             </div>
         );
     }
     
-}export default Feature
+}
+
+export default Feature
