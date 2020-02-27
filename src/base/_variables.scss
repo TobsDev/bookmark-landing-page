@@ -1,1 +1,8 @@
-$mobileWidth: 17rem;
+$mobileWidth: 30rem;
+
+@mixin mobile-section-setting {
+    width: 100%;
+    padding: 0rem 2rem 2rem;
+}
+
+$md-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);

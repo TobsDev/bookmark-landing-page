@@ -1,7 +1,11 @@
 @import '../../base/variables';
 
+.features {
+    @include mobile-section-setting;
+}
+
 .features__copy {
-    max-width: 17rem;
+    //max-width: 17rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.25rem;
@@ -26,7 +30,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     height: 1px;
 }
 
@@ -40,7 +44,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     height: 1px;
 }
 
@@ -54,7 +58,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     height: 1px;
 }
 
@@ -68,7 +72,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     height: 1px;
 }
 

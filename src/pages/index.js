@@ -21,8 +21,8 @@ class IndexPage extends React.Component {
         <Header />
         <Hero />
         <Features />
-        {/* <Downloads />
-        <FAQS />
+        <Downloads />
+        {/* <FAQS />
         <Newsletter />
         <Footer /> */}
       </div>

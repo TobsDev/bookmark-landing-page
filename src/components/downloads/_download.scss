@@ -1,0 +1,9 @@
+@import '../../base/variables';
+
+.downloads {
+    @include mobile-section-setting;
+}
+
+.downloads__description {
+    padding-bottom: 1.5rem;
+}

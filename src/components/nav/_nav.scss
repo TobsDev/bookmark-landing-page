@@ -7,9 +7,9 @@
 }
 
 .nav {
+    @include mobile-section-setting;
     position: fixed;
     height: 100vh;
-    width: 100%;
     background: transparentize($very-dark-blue, 0.04);
     background-size: cover;
     top: 0;
@@ -20,7 +20,7 @@
 }
 
 .nav__head {
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     margin: auto;
     padding-top: 2rem;
     line-height: 100%;
@@ -76,7 +76,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     height: 1px;
 }
 
@@ -90,7 +90,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     height: 1px;
 }
 
@@ -101,7 +101,7 @@
     margin: auto;
     left: 0;
     right: 0;
-    width: 17rem;
+    width: 100%;
 }
 
 
@@ -121,5 +121,6 @@
     font-size: 1.125rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    width: 17rem;
+    width: 100%;
+    max-width: $mobileWidth;
 }

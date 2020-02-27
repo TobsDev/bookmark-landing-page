@@ -3,11 +3,11 @@
 
 
 .hero {
-
+    @include mobile-section-setting;
 }
 
 .hero__image {
-    max-width: $mobileWidth;
+    max-width: 100%;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }

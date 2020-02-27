@@ -1,5 +1,5 @@
 .header {
-    //position: relative;
+    @include mobile-section-setting;
 }
 
 .header--invisible {
@@ -13,7 +13,7 @@
 }
 
 .header__items {
-    width: $mobileWidth;
+    max-width: $mobileWidth;
     margin: auto;
     padding-top: 2rem;
     line-height: 100%;
