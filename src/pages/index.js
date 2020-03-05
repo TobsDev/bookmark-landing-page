@@ -17,14 +17,14 @@ class IndexPage extends React.Component {
 
   render() {
     return ( 
-      <div className = "indexPage">
+      <div className = "indexPage" id="indexPage">
         <Header />
         <Hero />
         <Features />
         <Downloads />
-        {/* <FAQS />
+        <FAQS />
         <Newsletter />
-        <Footer /> */}
+        <Footer />
       </div>
     );
   }

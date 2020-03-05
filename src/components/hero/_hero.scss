@@ -4,12 +4,26 @@
 
 .hero {
     @include mobile-section-setting;
+    overflow: hidden;
+}
+
+.hero__illustrationContainer {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 .hero__image {
     max-width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    
+}
+
+.hero__background {
+    z-index: -1; 
+    position: absolute;
+    right: -3rem;
+    bottom: -1.5rem;
+    max-width: 95%;
 }
 
 .hero__headline {
@@ -34,7 +48,16 @@
     max-width: $mobileWidth;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8rem;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 7rem;
+    display: grid;
+    grid-template: 'button1 button2';
+    grid-gap: 1rem;
+}
+
+.hero__button1 {
+    grid-area: button1;
+}
+
+.hero__button2 {
+    grid-area: button2;
 }

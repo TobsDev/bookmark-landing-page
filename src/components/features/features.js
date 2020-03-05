@@ -6,7 +6,7 @@ class Features extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeFeature: 1
+            activeFeature: "1"
         }
         this.toggleFeature = this.toggleFeature.bind(this)
     }
@@ -26,9 +26,17 @@ class Features extends React.Component {
             <ul className="features__list">
                 {features.map(feature => {
                     return(
-                        <li className={`features__item ${this.state.activeFeature == feature.id ? 'features__item--active' : ''}`} id={feature.id} onClick={this.toggleFeature}>
-                            {feature.title}
-                        </li>
+                        <div key={feature.id} className="features__item-container">
+                            <li 
+                                className={`features__item ${this.state.activeFeature == feature.id ? 'features__item--active' : ''}`} 
+                                key={feature.id} 
+                                id={feature.id}
+                                onClick={this.toggleFeature}
+                            >
+                                {feature.title}
+                            </li>
+                        </div>
+                        
                     );
                 })}
             </ul>
@@ -39,6 +47,7 @@ class Features extends React.Component {
                         headline={feature.headline}
                         copy={feature.copy}
                         activeFeature={this.state.activeFeature}
+                        key={feature.id}
                         id={feature.id}
                     />
                 );

@@ -1,11 +1,27 @@
 import React from 'react';
+import arrow from '../../images/icon-arrow.svg'
 
-const Question = (props) => (
-    <div className="question">
-        <h3 className="question__title">{props.title}</h3>
-        <img src="" alt="" className="question__arrow question__active"/>
-        <p className="question__copy">{props.copy}</p>
-    </div>
-)
+class Question extends React.Component {
+    constructor(props) {
+        super(props);
+        
+    }
+    
+    render() {
+        const { toggleAnswer } = this.props
+
+        return(
+            <div className="question">
+                <div className="question__head" onClick={toggleAnswer}>
+                    <h4 className="question__title">{this.props.question}</h4>
+                    <div className="question__arrow">
+                        <img src={arrow} alt=""/>
+                    </div>
+                </div>
+                <p className="question__answer question__answer--toggled" id={this.props.id}>{this.props.answer}</p>
+            </div>
+        )
+    }
+}
 
 export default Question

@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from '../button/button';
 import close from '../../images/icon-close.svg'
-import logo from '../../images/logo-bookmark.svg'
+import logo from '../../images/logo-bookmark-inverted.svg'
+import Social from '../social/social'
 
 class Nav extends React.Component {
     constructor(props) {
@@ -24,11 +25,13 @@ class Nav extends React.Component {
                     />
                 </div>
                 <ul className="nav__links">
-                    {this.props.navLinks.map((navLink) => {
+                    {this.props.sections.map((section) => {
                         return (
-                            <li className="nav__linkItem" onClick={navToggle}>
-                                <a className="nav__link" href={navLink.url}>{navLink.section}</a>
-                            </li>
+                            <div key={section.id}>
+                                <li className="nav__linkItem" id={section.id} onClick={navToggle} >
+                                    <a className="nav__link" href={section.url}>{section.name}</a>
+                                </li>
+                            </div>
                         );
                     })}
                 </ul>
@@ -38,16 +41,15 @@ class Nav extends React.Component {
                     onClick={navToggle}
                 />
                 <ul className="nav__socialLinks">
-                    {this.props.socialLinks.map((socialLink) => {
+                    {this.props.socials.map((social) => {
                         return (
-                            <li className="nav__socialItem" onClick={navToggle}>
-                                <a className="nav__socialLink" href={socialLink.url}>
-                                    <img 
-                                        src={socialLink.iconUrl} 
-                                        alt={socialLink.platform}
-                                        className="nav__socialIcon"/>
-                                </a>
-                            </li>
+                            <Social 
+                                key={social.id}
+                                href={social.url}
+                                src={social.iconUrl} 
+                                alt={social.platform}
+                                onClick={navToggle}
+                            />
                         );
                     })}
                      

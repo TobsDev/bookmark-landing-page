@@ -6,6 +6,7 @@
     box-shadow: $md-box-shadow;
     border-radius: 1rem;
     position: relative;
+    @include mobile-max-width;
 }
 
 .downloadCard__button {

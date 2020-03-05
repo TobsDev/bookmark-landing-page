@@ -17,6 +17,7 @@
     color: white;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+    transition: top 0.3s;
 }
 
 .nav__head {
@@ -40,7 +41,6 @@
 }
 
 .nav__logo {
-    filter: brightness(10);
     float: left;
 }
 
@@ -95,24 +95,15 @@
 }
 
 .nav__socialLinks {
-    display: inline-block;
+    display: flex;
     position: absolute;
     bottom: 2.5rem;
     margin: auto;
     left: 0;
     right: 0;
-    width: 100%;
-}
-
-
-.nav__socialLink {
-    color: white;
-}
-
-.nav__socialItem {
-    display: inline-block;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav__button {

@@ -4,14 +4,37 @@ import facebookIcon from '../../images/icon-facebook.svg';
 import twitterIcon from '../../images/icon-twitter.svg';
 import open from '../../images/icon-hamburger.svg'
 import logo from '../../images/logo-bookmark.svg'
+import navigation from '../../content/navigation.json'
 
 class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            navState: false
+            navState: false,
+            prevScrollPos: window.pageYOffset,
+            headerVisible: true
         }
         this.toggleNav = this.toggleNav.bind(this);
+    }
+
+    componentDidMount() {
+        
+
+        // couldn't register event handler defined outside of componentDidMount
+        window.addEventListener('scroll', () => {
+            const currentScrollPos = window.pageYOffset
+            const headerVisible = this.state.prevScrollPos > currentScrollPos;
+
+            this.setState({
+                prevScrollPos: currentScrollPos,
+                headerVisible
+            });
+        });
+        
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll')
     }
 
     toggleNav() {
@@ -20,9 +43,13 @@ class Header extends React.Component {
         })
     }
 
+
     render() {
         return(
-            <div id="header" className="header">
+            <div 
+                id="header" 
+                className={`header ${this.state.headerVisible ? 'header--sticky' : ''}`}
+            >
                 <div className="header__items">
                     <img 
                         src={logo} 
@@ -40,32 +67,19 @@ class Header extends React.Component {
                 <Nav 
                     navState={this.state.navState}
                     navToggle={this.toggleNav}
-                    navLinks={
-                        [
+                    sections={navigation.sections}
+                    socials={[
                         {
-                            section: 'Features',
-                            url: '#features'
+                            id: 1,
+                            url: '/',
+                            iconUrl: facebookIcon,
+                            platform: 'Facebook'
                         },
                         {
-                            section: 'Pricing',
-                            url: '#pricing'
-                        },
-                        {
-                            section: 'Contact',
-                            url: '#newsletter'
-                        }
-                        ]
-                    }
-                    socialLinks={[
-                        {
-                        url: facebookIcon,
-                        iconUrl: facebookIcon,
-                        platform: 'Facebook'
-                        },
-                        {
-                        url: '/',
-                        iconUrl: twitterIcon,
-                        platform: 'Twitter'
+                            id: 2,
+                            url: '/',
+                            iconUrl: twitterIcon,
+                            platform: 'Twitter'
                         }
                     ]}
                 />

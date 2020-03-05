@@ -2,8 +2,10 @@
 
 .downloads {
     @include mobile-section-setting;
+    padding-bottom: 6.5rem;
 }
 
 .downloads__description {
     padding-bottom: 1.5rem;
+    @include mobile-max-width;
 }

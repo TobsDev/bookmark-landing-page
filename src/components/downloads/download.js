@@ -12,6 +12,7 @@ const Downloads = () => (
         {downloads.map((download) => {
             return(
                 <DownloadCard 
+                    key={download.id}
                     id={download.id}
                     name={`Add to ${download.name}`}
                     minVersion={`Minimum version ${download.minVersion}`}

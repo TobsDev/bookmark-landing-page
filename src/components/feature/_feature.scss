@@ -1,16 +1,35 @@
+.feature {
+    transition: all 0.5s ease-in-out;
+}
+
 .feature__description {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.25rem;
+    max-width: $mobileWidth;
+}
+
+.feature__background {
+    z-index: -1;
+    position: absolute;
+    left: -3rem;
+    bottom: -1.5rem;
+    max-width: 95%;
+    transform: rotate(180deg);
+}
+
+.feature__illustration-container {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 .feature__image {
     max-width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
 }
 
 .feature--inactive {
-    display: none;
+    height: 0px;
+    opacity: 0;
 }

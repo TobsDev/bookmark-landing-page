@@ -1,0 +1,16 @@
+@import '../../base/variables';
+
+.faqs {
+    @include mobile-section-setting;
+    padding-bottom: 6.5rem;
+}
+
+.faqs__description {
+    padding-bottom: 2.5rem;
+    @include mobile-max-width;
+}
+
+.faqs__modal-list {
+    padding-bottom: 2rem;
+    @include mobile-max-width;
+}

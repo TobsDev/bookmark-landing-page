@@ -7,6 +7,10 @@ class Newsletter extends React.Component {
         
     }
 
+    validateMail(e) {
+        let mail = e.target.value
+    }
+
     render() {
         return(
             <div className="newsletter" id="newsletter">
