@@ -2,7 +2,8 @@ import React from 'react';
 import feature1 from '../../images/illustration-features-tab-1.svg'
 import feature2 from '../../images/illustration-features-tab-2.svg'
 import feature3 from '../../images/illustration-features-tab-3.svg'
-import backgroundShape from '../../images/background-shape.svg'
+import backgroundShape from '../../images/background-shape-long.svg'
+import Button from '../button/button'
 
 class Feature extends React.Component {
     constructor(props) {
@@ -29,9 +30,15 @@ class Feature extends React.Component {
                         className="feature__background" 
                     />      
                 </div>
-                
-                <h3 className="feature__headline">{this.props.headline}</h3>
-                <p className="feature__description">{this.props.copy}</p>
+                <div className="feature__details">
+                    <h3 className="feature__headline">{this.props.headline}</h3>
+                    <p className="feature__description">{this.props.copy}</p>
+                    <div className="feature__button">
+                        <Button 
+                            cta="More Info"
+                        />
+                    </div>
+                </div>
             </div>
         );
     }

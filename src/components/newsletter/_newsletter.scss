@@ -7,6 +7,11 @@
     padding-bottom: 3.5rem;
     background-color: $soft-blue;
     color: $light-gray;
+    grid-area: newsletter;
+}
+
+.newsletter__viewport {
+    @include mobile-max-width;
 }
 
 .newsletter__form {
@@ -43,4 +48,21 @@
 
 .newsletter__input::placeholder {
     color: transparentize($grayish-blue, 0.5);
+}
+
+@media (min-width: $mediumWidth) {
+    .newsletter__input {
+        width: 300px;
+        margin-right: 0.75rem;
+    }
+
+    .newsletter__button {
+        width: 127px;
+    }
+
+    .newsletter__title {
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        line-height: 2.5rem;
+    }
 }

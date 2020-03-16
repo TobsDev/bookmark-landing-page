@@ -1,8 +1,12 @@
 @import '../../base/variables';
 
 .features {
-    @include mobile-section-setting;
     overflow: hidden;
+    grid-area: features;
+}
+
+.features__viewport {
+    @include mobile-section-setting;
     padding-bottom: 6.5rem;
 }
 
@@ -49,6 +53,10 @@
     height: 1px;
 } 
 
+.features__item--active {
+    color: black;
+}
+
 .features__item--active::after {
     content: '';
     background-color: transparentize(red, 0.2);
@@ -61,4 +69,66 @@
     margin: auto;
     width: 8rem;
     height: 4px;
+}
+
+@media (min-width: $mediumWidth) {
+    .features__viewport {
+        display: grid;
+        grid-template-areas: 
+            'features'
+            'feature';
+    }
+
+    .features {
+        margin: 5rem auto 0 auto;
+    }
+
+    .features__overview {
+        position: relative;
+        grid-area: features;
+    }
+
+    .features__viewport {
+        @include desktop-section-setting;
+    }
+
+    .features__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .features__list::before {
+        display: none;
+    }
+
+    .features__item-container {
+        flex-basis: 100%;
+    }
+
+    .features__item-container::after {
+        display: none;
+    }
+
+    .features__overview {
+        @include medium-max-width;
+    }
+
+    .features__overview::after {
+        content: '';
+        background-color: transparentize(black, 0.8);
+        padding: 0;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include medium-max-width;
+        height: 1px;
+    }
+
+    .features__item--active::after {
+        width: 13.5rem;
+    }
+
 }

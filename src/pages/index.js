@@ -5,8 +5,8 @@ import Features from '../components/features/features'
 import Downloads from '../components/downloads/download'
 import FAQS from '../components/faqs/faqs'
 import Newsletter from '../components/newsletter/newsletter'
-import '../scss/main.scss'
 import Footer from '../layout/footer/footer'
+import '../scss/main.scss'
 
 
 class IndexPage extends React.Component {

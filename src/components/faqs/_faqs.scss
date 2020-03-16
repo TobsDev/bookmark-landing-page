@@ -3,6 +3,7 @@
 .faqs {
     @include mobile-section-setting;
     padding-bottom: 6.5rem;
+    grid-area: faqs;
 }
 
 .faqs__description {

@@ -5,6 +5,7 @@
     @include mobile-section-setting;
     background-color: $very-dark-blue;
     padding-top: 2rem;
+    grid-area: footer;
 }
 
 .footer__item {
