@@ -6,13 +6,14 @@ import open from '../../images/icon-hamburger.svg'
 import logo from '../../images/logo-bookmark.svg'
 import navigation from '../../content/navigation.json'
 import Button from '../../components/button/button'
+import window from 'global'
 
 class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             navState: false,
-            prevScrollPos: window.pageYOffset,
+            prevScrollPos: 0,
             headerVisible: true
         }
         this.toggleNav = this.toggleNav.bind(this);
